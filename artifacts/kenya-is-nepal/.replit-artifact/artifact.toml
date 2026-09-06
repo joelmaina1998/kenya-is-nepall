@@ -1,0 +1,35 @@
+kind = "web"
+previewPath = "/"
+title = "kenyaIsNepal.org"
+description = "A public humanitarian solidarity site connecting Kipsaraman, West Pokot with Nepal, with transparent donations, community prayers, updates, and an authenticated field desk."
+version = "1.0.0"
+id = "artifacts/kenya-is-nepal"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26133
+
+[services.development]
+run = "pnpm --filter @workspace/kenya-is-nepal run dev"
+
+[services.production.build]
+args = ["pnpm", "--filter", "@workspace/kenya-is-nepal", "run", "build"]
+
+[services.production.build.env]
+NODE_ENV = "production"
+
+[services.production.run]
+args = ["pnpm", "--filter", "@workspace/kenya-is-nepal", "run", "serve"]
+
+[services.production.run.env]
+NODE_ENV = "production"
+PORT = "26133"
+
+[services.production.health.startup]
+path = "/"
+
+[services.env]
+PORT = "26133"
+BASE_PATH = "/"

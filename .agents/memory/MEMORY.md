@@ -1,0 +1,1 @@
+- [Artifact routing](artifact-routing.md) — Next apps with `/api/*` routes must not share the proxy path with a generic API service.

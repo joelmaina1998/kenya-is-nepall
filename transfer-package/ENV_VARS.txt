@@ -1,0 +1,6 @@
+# Add these in Vercel's Environment Variables UI for Production, Preview, and Development as needed.
+# Do not commit secret values. Copy the two secret values from the secure Replit Secrets store.
+NEXT_PUBLIC_SUPABASE_URL=https://bdgdvukotgrytactwses.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<copy from secure Replit Secret NEXT_PUBLIC_SUPABASE_ANON_KEY>
+SUPABASE_SERVICE_ROLE_KEY=<copy from secure Replit Secret SUPABASE_SERVICE_ROLE_KEY>
+NEXT_PUBLIC_SITE_URL=https://kenyaIsNepal.org
